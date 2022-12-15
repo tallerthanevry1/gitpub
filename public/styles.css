@@ -1,0 +1,13 @@
+*{
+    background-color: steelblue;
+}
+h1{
+    color: black;
+    text-align: center;
+    size: 20px;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+}

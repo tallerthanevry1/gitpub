@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+ 
+    <h1>At foo Kitchen</h1>
+    <h2><%= food.name %></h2>
+     <% 
+     //this function will update the image url
+        function updateToPng(url){
+           const newUrl = url.slice(0, -3)
+           return newUrl + "png"
+        }
+    %>
+    <img src="<%= updateToPng(food.image)%>" alt="">
+   
+    <h3>$ <%= food.price %></h3>
+    <a href="/food" id="button">Back</a>
+
+</body>
+</html>

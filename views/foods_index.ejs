@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitpub</title>
+</head>
+<body>
+    <h1>Welcome to Gitpub</h1>
+    <ul>
+      <% for(let i = 0; i < allFoods.length; i++){ %>
+      <% const food = allFoods[i] %>
+      <% const foodName = food.name %>
+      <% const capWord = foodName.charAt(0).toUpperCase() + foodName.slice(1) %>
+        <li>
+           <a href="/foods/<%=i %> "><%=capWord %></a>
+        </li>
+       <%  } %> 
+    </ul>
+    <a href="/gitpub"><button class="b3">Back to main menu</button></a>
+</body>
+</html>
